@@ -79,8 +79,7 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
 const setEventListeners = (formElement, settings) => {
   const inputList = Array.from(formElement.querySelectorAll(settings.inputSelector));
   const buttonElement = formElement.querySelector(settings.submitButtonSelector);
-
-  // Устанавливаем начальное состояние кнопки
+  
   toggleButtonState(inputList, buttonElement, settings);
 
   inputList.forEach(inputElement => {
@@ -111,8 +110,7 @@ export const clearValidation = (formElement, settings) => {
 
   inputList.forEach(inputElement => {
     hideInputError(formElement, inputElement, settings);
-  });
-
-  // Делаем кнопку неактивной при очистке
+  })
+  
   disableSubmitButton(buttonElement, settings);
 };
