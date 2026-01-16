@@ -173,7 +173,7 @@ allPopups.forEach((popup) => {
   setCloseModalWindowEventListeners(popup);
 });
 
-// Включаем валидацию всех форм
+// Включаем валидацию всех  форм
 enableValidation(validationSettings);
 
 let userID = null;
