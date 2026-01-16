@@ -1,10 +1,3 @@
-/*
-  Файл index.js является точкой входа в наше приложение
-  и только он должен содержать логику инициализации нашего приложения
-  используя при этом импорты из других файлов
-
-  Из index.js не допускается что то экспортировать
-*/
 import { createCardElement, deleteCard, likeCard } from "./components/card.js";
 import { openModalWindow, closeModalWindow, setCloseModalWindowEventListeners } from "./components/modal.js";
 import { enableValidation, clearValidation } from "./components/validation.js";
@@ -18,7 +11,6 @@ import {
   changeLikeCardStatus 
 } from "./components/api.js";
 
-// DOM узлы
 const placesWrap = document.querySelector(".places__list");
 const profileFormModalWindow = document.querySelector(".popup_type_edit");
 const profileForm = profileFormModalWindow.querySelector(".popup__form");
@@ -175,7 +167,7 @@ openCardFormButton.addEventListener("click", () => {
   clearValidation(cardForm, validationSettings);
 });
 
-//настраиваем обработчики закрытия попапов
+//настраиваем обработчики закрытия поп
 const allPopups = document.querySelectorAll(".popup");
 allPopups.forEach((popup) => {
   setCloseModalWindowEventListeners(popup);
